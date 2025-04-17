@@ -1,17 +1,39 @@
-# 🧠 AI Trend Synthesizer CLI Tool
+# 🧠 AI Trend Synthesizer CLI Tool (Enhanced)
 
-A lightweight command-line tool for summarizing trends on popular AI technologies like AutoGPT and Claude. Perfect for analysts, strategists, and content specialists looking to turn tech research into quick insight briefs.
+A lightweight command-line tool that summarizes AI topics like AutoGPT or Claude using **live headlines** from DuckDuckGo and optionally NewsAPI. It also includes predefined summaries, use cases, and risks to simulate what an analyst might present to a stakeholder.
 
 ## 🔧 Features
 
-- Topic-based AI summaries
-- Pre-loaded with headlines, use cases, and risk analysis
-- Easily extendable for real-world API integration or web scraping
+- ✅ Real-time headline extraction (DuckDuckGo)
+- 📰 Optional integration with [NewsAPI.org](https://newsapi.org/)
+- 📚 Built-in summaries for AutoGPT and Claude
+- 🧠 Insight-ready formatting for content and strategy teams
 
 ## 🚀 How to Run
 
+**Command line:**
 ```bash
-python ai_trend_synthesizer.py AutoGPT
+python ai_trend_synthesizer.py Claude
+```
+
+**In a Jupyter Notebook:**
+```python
+from ai_trend_synthesizer import synthesize_trend
+synthesize_trend("Claude")
+```
+
+## 🌐 Environment Variables
+
+To use NewsAPI (optional), set an API key in your environment:
+```bash
+export NEWS_API_KEY=your_api_key_here
+```
+
+## 📦 Requirements
+
+Install dependencies:
+```bash
+pip install requests beautifulsoup4
 ```
 
 ## 🧪 Sample Output
@@ -19,20 +41,19 @@ python ai_trend_synthesizer.py AutoGPT
 ```
 === AI Trend Summary ===
 
-Topic: AutoGPT
+Topic: Claude
+
+Top Headlines (DuckDuckGo):
+- Claude outperforms GPT in multi-turn conversations
+- Claude used in enterprise chatbot demos...
 
 Summary:
-AutoGPT is an emerging autonomous agent framework...
-
-Top Headlines:
-- AutoGPT automates multi-step tasks with minimal input
-- Businesses explore AutoGPT for customer service automation
+Claude is a conversational AI developed by Anthropic...
 
 Key Use Cases:
-- Customer service automation
-- Research agents
+- Legal summarization
+- Customer support
 
 Risks / Considerations:
-- Inaccurate outputs
-- Overreliance on automation
+- Requires structured prompting
 ```
